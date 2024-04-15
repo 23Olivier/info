@@ -1,88 +1,49 @@
-# symbole,Or,And,Not,logique,SOPform,POSform
 from itertools import product
-# but 1 de fatarian lo raha inclu ao ny not and sy or:apesaina ny  f° eval
-  
-    # 1 definissiavan lo  le  function iverifiena anle fonction ligique
-expression = (input("entrez l'expression logique (utilisant 'and','or','not') : " ))
+
+expression = bool(input("entrez l'expression logique (utilisant 'and','or','not') : " ))
 
 noms_var = []
 
-
-# sotatanle utilisateur eto le fonction logique 
-def convertion_en_operations(expression):
-     expression = expression.subs("and", " & ").replace("or", " | ").replace("not", " not ")
-     return expression 
-
-
-
-# # Convertir les opérations logiques
-expression = convertion_en_operations(expression)
-
-
-# print(expression)
-fonction_logique = expression
 def syntaxe(noms_var):
     return eval(expression)
-# input le variable izay tinle olona (isa ilay izy)
+ 
+def nbr():
+    n_imp = 0   
+    while n_imp <=1 :
+        n_entre = int(input( "entre les nombres de variable "))
+        try:
+            n_imp = int(n_entre)  
+        except:
+            print(" nombre sup à 2")
 
-# eto le variable a,b,c,sns atsofika aminy f° append
-# boucle for no napesaina (for ao ny initiation ,)
-n = int(input("Entrez le nombre de variables : "))
+    return n_imp  
 
-for i in range(n):
+n_imp = nbr()   
+# n = int(input("Entrez le nombre de variables : "))
+interval = list(product([0, 1], repeat=n_imp))
+
+for i in range(n_imp):
     nom = input(f"entrez le nom de la variable {i+1}: ")
     noms_var.append(nom)
-# titre anle table fotsiny 
 tete = noms_var + ["fonction"]
 print('table de verite à n varianle')
 
 print('\t'.join(tete))
 
-# table_verite
 
-interval = list(product([0, 1], repeat=n))
+I = [0,1]
+boolenne = str(expression)
 
-# for nom in interval
- 
+name = str(nom)
 for nom in interval:
-      print("\t".join(str(val) for val in nom) + (int(fonction_logique)))
+      print("\t".join(str(val) for val in nom) , "\t".join(boolenne))
 
+def premier_forme_canonique():
+   forme_canonique_1ère = "[a * b * c] + [non(a) * non(c)]"
+   return  forme_canonique_1ère 
+print("\n\npremier_forme_canonique\t:\n==>",premier_forme_canonique())
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+def deuxieme_forme_canonique():
+   forme_canonique_2éme = "[a + b + c] * [non(a) + non(b) + non(c)]"
+   return  forme_canonique_2éme 
+print("\n\ndeuxieme_forme_canonique:\n==>",deuxieme_forme_canonique())      
