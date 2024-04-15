@@ -2,7 +2,6 @@ from itertools import product
 variables = []
 
 def print_karnaugh(variables, values):
-    # Affiche la table de Karnaugh à partir des variables et de leurs valeurs
     entrez = input('entrez votre variable')
     entrez.append(variables)
     num_variables = len(variables)
@@ -10,13 +9,11 @@ def print_karnaugh(variables, values):
     karnaugh_map = [[' ' for _ in range(2**(num_variables-1))]
     
 for nums_rows in range(2**(num_variables-1))]:
-    # Remplit la table de Karnaugh avec les valeurs fournies
    for i, value in enumerate(values):
         row = i // (2**(num_variables-1))
         col = i % (2**(num_variables-1))
         karnaugh_map[row][col] = str(int(value))
 
-    # Affiche la table de Karnaugh
     print("Table de Karnaugh :")
     print(" "*(num_variables//2 + 1), end='')
         for i in range(2**(num_variables-1)):
@@ -26,7 +23,6 @@ for nums_rows in range(2**(num_variables-1))]:
              print(variables[0] + str(i), end=' '*((num_variables//2)*2 + 1))
             print(' | '.join(row))
 
-# Demande à l'utilisateur de saisir les noms des variables
 num_variables = int(input("Entrez le nombre de variables : "))
 variables = [input(f"Entrez le nom de la variable {i+1} : ") for i in range(num_variables)]
 
