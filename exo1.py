@@ -34,7 +34,7 @@ def nbr():
     return n_imp  
 
 n_imp = nbr()   
-# n = int(input("Entrez le nombre de variables : "))
+
 interval = list(product([0, 1], repeat=n_imp))
 
 for i in range(n_imp):
@@ -45,8 +45,6 @@ print('table de verite à n varianle')
 
 print('\t'.join(tete))
 
-
-I = [0,1]
 boolenne = str(expression)
 
 name = str(nom)
