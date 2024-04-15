@@ -1,17 +1,20 @@
 # algo
 """
-1 - entrez la function 
+1-entrez la function 
  
-2 - entrez les nombre de variable en variable indfini
+2-entrez les nombre de variable en variable indfini
 
-3 - definire la function logique à partir de l'expression sur l'input
+3-definire la function logique à partir de l'expression sur l'input
 
-4 - definir la fonction qui peermet d'afficher les variables
+4-definir la fonction qui peermet d'afficher les variables
 
-5 - boucle car dans la fonction logique on combine deux variables minimun
+5-boucle car dans la fonction logique on combine deux variables minimun
 
 6-boucle qui permet de repeter n fois les combinaisons des variable entrez par les utilissateurs plus function logique déjà analyse pour avoir la table de vérité 
 
+7-fonction qui permet d'afficher la premiere forme canonique
+
+8-fonction qui permet d'afficher la deuxieme forme canonique
 """
 from itertools import product
 
