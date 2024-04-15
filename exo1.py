@@ -1,3 +1,18 @@
+# algo
+"""
+1 - entrez la function 
+ 
+2 - entrez les nombre de variable en variable indfini
+
+3 - definire la function logique à partir de l'expression sur l'input
+
+4 - definir la fonction qui peermet d'afficher les variables
+
+5 - boucle car dans la fonction logique on combine deux variables minimun
+
+6-boucle qui permet de repeter n fois les combinaisons des variable entrez par les utilissateurs plus function logique déjà analyse pour avoir la table de vérité 
+
+"""
 from itertools import product
 
 expression = bool(input("entrez l'expression logique (utilisant 'and','or','not') : " ))
